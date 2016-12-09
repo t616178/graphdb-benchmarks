@@ -1,6 +1,8 @@
 package eu.socialsensor.main;
 
 import static org.junit.Assert.fail;
+
+import eu.socialsensor.benchmarks.MassiveInsertionBenchmark;
 import org.junit.Test;
 
 public class GraphDatabaseBenchmarkTest

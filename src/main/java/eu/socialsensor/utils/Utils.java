@@ -13,6 +13,7 @@ import java.util.Map.Entry;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import eu.socialsensor.graphdatabases.GafferGraphDatabase;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
@@ -198,6 +199,10 @@ public class Utils
         else if (GraphDatabaseType.SPARKSEE == type)
         {
             graphDatabase = new SparkseeGraphDatabase(config, dbStorageDirectory);
+        }
+        else if (GraphDatabaseType.GAFFER_ACCUMULO == type)
+        {
+            graphDatabase = new GafferGraphDatabase(config, dbStorageDirectory);
         }
         else
         {
